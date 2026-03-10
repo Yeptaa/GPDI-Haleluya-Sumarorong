@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPDI Haleluya Sumarorong</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-900 selection:bg-[#D4AF37] selection:text-[#4B0082]">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <img src="logo.png" alt="Logo GPdI" class="h-20 w-auto">
+                    <span id="nav-logo-text" class="text-2xl font-bold tracking-tighter text-white">
+                        GPDI <span class="text-[#D4AF37]">HALELUYA</span>
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-white/90 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#profil" class="nav-link text-white/90 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Profil</a>
+                        <a href="#jadwal" class="nav-link text-white/90 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Jadwal</a>
+                        <a href="#galeri" class="nav-link text-white/90 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Galeri</a>
+                        <a href="#kontak" class="nav-link text-white/90 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Kontak</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-white">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#4B0082] hover:bg-gray-50">Home</a>
+                <a href="#profil" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#4B0082] hover:bg-gray-50">Profil</a>
+                <a href="#jadwal" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#4B0082] hover:bg-gray-50">Jadwal</a>
+                <a href="#galeri" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#4B0082] hover:bg-gray-50">Galeri</a>
+                <a href="#kontak" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#4B0082] hover:bg-gray-50">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden bg-[#4B0082]">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=1920" alt="Church Background" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#4B0082]/60 via-transparent to-[#4B0082]/80"></div>
+        </div>
+
+        <!-- Animasi Salib di Gunung Golgota -->
+        <div id="golgota-container" class="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 pointer-events-none transition-transform duration-300 ease-out">
+            <div class="relative">
+                <svg viewBox="0 0 1000 400" class="w-[120vw] md:w-[80vw] h-auto fill-[#4B0082]/90">
+                    <path d="M0,400 L300,100 L500,250 L700,50 L1000,400 Z" />
+                </svg>
+                <div class="absolute top-[10%] left-1/2 -translate-x-1/2 flex flex-col items-center">
+                    <div class="w-2 h-24 md:w-4 md:h-48 bg-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.5)]"></div>
+                    <div class="absolute top-[25%] w-16 h-2 md:w-32 md:h-4 bg-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.5)]"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-20 text-center px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight animate-fade-in-up">
+                GPDI <span class="text-[#D4AF37]">HALELUYA</span> <br>
+                SUMARORONG
+            </h1>
+            <p class="text-lg md:text-xl text-white/80 mb-10 font-light leading-relaxed animate-fade-in-up delay-200">
+                "Sebab di mana dua atau tiga orang berkumpul dalam Nama-Ku, di situ Aku ada di tengah-tengah mereka." - Matius 18:20
+            </p>
+            <div class="animate-fade-in-up delay-400">
+                <a href="#jadwal" class="inline-flex items-center px-8 py-4 bg-[#D4AF37] text-[#4B0082] font-bold rounded-full hover:bg-white transition-all transform hover:scale-105 shadow-lg">
+                    Jadwal Ibadah
+                    <i data-lucide="chevron-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section id="profil" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="logo.png" alt="Church Interior" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-[#D4AF37]/10 rounded-2xl -z-10"></div>
+                </div>
+
+                <div>
+                    <h2 class="text-[#4B0082] font-bold text-sm uppercase tracking-widest mb-4">Tentang Kami</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Visi Misi</h3>
+                    <div class="space-y-4 text-gray-600 leading-relaxed">
+                        <p><strong>Visi Kami:</strong> Menjadi jemaat yang berakar kuat dalam Firman, bertumbuh dalam karakter Kristus, dan berbuah bagi kemuliaan Bapa di Surga.</p>
+                        <p><strong>Misi Kami:</strong> 1. Menyelenggarakan ibadah yang khidmat dan penuh urapan Roh Kudus. 2. Membangun komunitas yang saling mengasihi dan menguatkan. 3. Memberitakan Injil keselamatan kepada semua orang melalui tindakan nyata.</p>
+                        <p class="italic text-[#4B0082]/80">"Kami percaya bahwa setiap orang memiliki tempat di rumah Tuhan, dan kami mengundang Anda untuk menjadi bagian dari keluarga besar kami."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JADWAL IBADAH -->
+    <section id="jadwal" class="py-24 bg-gray-50 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[#4B0082] font-bold text-sm uppercase tracking-widest mb-4">Waktu Pelayanan</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Jadwal Ibadah</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Ibadah Raya -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+                    <div class="mb-6 p-4 bg-[#D4AF37]/10 rounded-xl w-fit group-hover:bg-[#D4AF37] transition-colors">
+                        <i data-lucide="clock" class="text-[#D4AF37] group-hover:text-white transition-colors" size="32"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Ibadah Raya</h4>
+                    <p class="text-[#4B0082] font-semibold mb-4">Minggu, 08:00 WITA</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Ibadah raya mingguan untuk seluruh jemaat dengan puji-pujian dan pemberitaan Firman Tuhan.</p>
+                </div>
+                <!-- Ibadah Pemuda -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+                    <div class="mb-6 p-4 bg-[#D4AF37]/10 rounded-xl w-fit group-hover:bg-[#D4AF37] transition-colors">
+                        <i data-lucide="clock" class="text-[#D4AF37] group-hover:text-white transition-colors" size="32"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Ibadah Pemuda</h4>
+                    <p class="text-[#4B0082] font-semibold mb-4">Jumat, 18:30 WITA</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Persekutuan khusus generasi muda (Youth) untuk bertumbuh bersama dalam iman dan kreativitas.</p>
+                </div>
+                <!-- Ibadah Puasa -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+                    <div class="mb-6 p-4 bg-[#D4AF37]/10 rounded-xl w-fit group-hover:bg-[#D4AF37] transition-colors">
+                        <i data-lucide="clock" class="text-[#D4AF37] group-hover:text-white transition-colors" size="32"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Ibadah Puasa</h4>
+                    <p class="text-[#4B0082] font-semibold mb-4">Jumat, 13:00 WITA</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Ibadah puasa dan doa bersama untuk penguatan iman dan syafaat bagi jemaat.</p>
+                </div>
+                <!-- Pujian & Penyembahan -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+                    <div class="mb-6 p-4 bg-[#D4AF37]/10 rounded-xl w-fit group-hover:bg-[#D4AF37] transition-colors">
+                        <i data-lucide="clock" class="text-[#D4AF37] group-hover:text-white transition-colors" size="32"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Pujian & Penyembahan</h4>
+                    <p class="text-[#4B0082] font-semibold mb-4">Sabtu, 18:00 WITA</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Ibadah khusus pujian dan penyembahan untuk masuk lebih dalam ke hadirat Tuhan.</p>
+                </div>
+                <!-- Sekolah Minggu -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+                    <div class="mb-6 p-4 bg-[#D4AF37]/10 rounded-xl w-fit group-hover:bg-[#D4AF37] transition-colors">
+                        <i data-lucide="clock" class="text-[#D4AF37] group-hover:text-white transition-colors" size="32"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Sekolah Minggu</h4>
+                    <p class="text-[#4B0082] font-semibold mb-4">Minggu,10:00 WITA</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Ibadah dan pengajaran Alkitab yang kreatif untuk anak-anak usia dini hingga sekolah dasar.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+                    <div class="mb-6 p-4 bg-[#D4AF37]/10 rounded-xl w-fit group-hover:bg-[#D4AF37] transition-colors">
+                        <i data-lucide="clock" class="text-[#D4AF37] group-hover:text-white transition-colors" size="32"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Ibadah Pagi</h4>
+                    <p class="text-[#4B0082] font-semibold mb-4">Senin - Sabtu,05:00 WITA</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Ibadah Do'a Pagi ,Ibadah sebelum memulai aktivitas agar Tuhan Yesus Menyertai sepanjang hari </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[#4B0082] font-bold text-sm uppercase tracking-widest mb-4">Dokumentasi</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Galeri Foto</h3>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1515162305285-0293e4767cc2?auto=format&fit=crop&q=80&w=600" alt="Gallery 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1477617722074-45613a51bf6d?auto=format&fit=crop&q=80&w=600" alt="Gallery 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&q=80&w=600" alt="Gallery 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?auto=format&fit=crop&q=80&w=600" alt="Gallery 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80&w=600" alt="Gallery 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&q=80&w=600" alt="Gallery 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontak" class="bg-[#4B0082] text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Info Gereja -->
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="logo.png" alt="Logo GPdI" style="width: 20%">
+                        <h4 class="text-2xl font-bold">GPDI <span class="text-[#D4AF37]">HALELUYA</span></h4>
+                    </div>
+                    <p class="text-white/70 mb-8 leading-relaxed">Melayani Tuhan dan sesama dengan kasih yang tulus. Mari bergabung dalam persekutuan kami.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-[#D4AF37] transition-colors"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-[#D4AF37] transition-colors"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-[#D4AF37] transition-colors"><i data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Kontak -->
+                <div>
+                    <h5 class="text-lg font-bold mb-6 border-b border-white/10 pb-2">Hubungi Kami</h5>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3 text-white/70">
+                            <i data-lucide="map-pin" class="text-[#D4AF37] shrink-0"></i>
+                            <span>Jl. Poros Sumarorong, Mamasa, Sulawesi Barat</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-white/70">
+                            <i data-lucide="phone" class="text-[#D4AF37] shrink-0"></i>
+                            <span>+62 812-3456-7890</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-white/70">
+                            <i data-lucide="mail" class="text-[#D4AF37] shrink-0"></i>
+                            <span>info@gpdihaleluyasumarorong.org</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Link Cepat -->
+                <div>
+                    <h5 class="text-lg font-bold mb-6 border-b border-white/10 pb-2">Link Cepat</h5>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-white/70 hover:text-[#D4AF37] transition-colors">Home</a></li>
+                        <li><a href="#profil" class="text-white/70 hover:text-[#D4AF37] transition-colors">Profil</a></li>
+                        <li><a href="#jadwal" class="text-white/70 hover:text-[#D4AF37] transition-colors">Jadwal</a></li>
+                        <li><a href="#galeri" class="text-white/70 hover:text-[#D4AF37] transition-colors">Galeri</a></li>
+                    </ul>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="h-64 rounded-xl overflow-hidden border border-white/10">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.386123456789!2d119.345678!3d-3.012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMDAnNDQuNCJTIDExOcKwMjAnNDQuNCJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 text-center text-white/50 text-sm">
+                <p>&copy; <span id="year"></span> GPDI Haleluya Sumarorong. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "GPDI Haleluya Sumarorong",
+  "description": "Website resmi GPDI Haleluya Sumarorong - Melayani dengan Kasih dan Iman.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
